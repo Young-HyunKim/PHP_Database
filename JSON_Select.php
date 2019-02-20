@@ -6,6 +6,8 @@ $row = mysqli_fetch_array($result);
 $row = mysqli_fetch_array($result);
 $JsonArray = array("number" => $row[0],"Title" => $row[1],"Content" => $row[2],"Date" => $row[3]); // Todo encoding.
 
-echo json_encode($JsonArray);
+$set = json_encode($JsonArray,JSON_UNESCAPED_UNICODE);
+echo $set;
+
 
 ?>
